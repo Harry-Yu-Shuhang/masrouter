@@ -8,6 +8,7 @@ import asyncio
 from MAR.Graph.node import Node
 from MAR.Utils.utils import find_mode
 from MAR.Agent.agent_registry import AgentRegistry
+import traceback
 
 class Graph(ABC):
     """
@@ -244,6 +245,7 @@ class Graph(ABC):
                         break
                     except Exception as e:
                         print(f"Error during execution of node {current_node_id}: {e}")
+                        traceback.print_exc()#这是新加的
                     tries += 1
                 for successor in self.nodes[current_node_id].spatial_successors:
                     if successor.id not in self.nodes.keys():

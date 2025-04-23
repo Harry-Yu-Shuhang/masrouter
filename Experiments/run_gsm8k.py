@@ -61,6 +61,7 @@ def parse_args():
 
 
 if __name__ == '__main__':
+    print("URL=", os.environ.get("URL"))
     args = parse_args()
     dataset = JSONLReader.parse_file("Datasets/gsm8k/sample_gsm8k.jsonl")
     dataset = gsm_data_process(dataset)
@@ -145,6 +146,7 @@ if __name__ == '__main__':
         tasks_y = torch.tensor(task_labels).to(device)
         optimizer.zero_grad()
         results, costs, log_probs, tasks_probs = router.forward(queries, tasks, llms, reasonings, task_labels)
+
         # results, costs, log_probs, tasks_probs = asyncio.run(router.aforward(queries, tasks, llms, reasonings, task_labels))
         utilities = []
         for result, true_answer, log_prob, cost in zip(results, answers, log_probs, costs):

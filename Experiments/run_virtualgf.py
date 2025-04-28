@@ -39,8 +39,10 @@ if __name__ == '__main__':
 
     # 检查 Models 文件夹
     if not os.path.exists("Models/virtual_gf"):
-        logger.error("Models/virtual_gf 文件夹不存在！请先创建。")
-        sys.exit(1)
+        logger.warning("Models/virtual_gf 文件夹不存在，正在创建...")
+        os.makedirs("Models/virtual_gf", exist_ok=True)
+        logger.info("✅ Models/virtual_gf 文件夹已创建。")
+
 
     dataset = JSONLReader.parse_file(args.dataset_json)
     dataset = daily_dialogue_data_process(dataset)

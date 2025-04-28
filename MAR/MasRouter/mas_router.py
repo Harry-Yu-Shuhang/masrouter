@@ -91,17 +91,9 @@ class MasRouter(torch.nn.Module):
             costs.append(Cost.instance().value - previous_cost)
         
         #FIXME:Debug输出
-        # Debug: 打印 logits
-        logger.debug(f"Task logits (cosine similarities): {tasks_probs}")
-
-        # Debug: 打印 softmax 后的概率
-        tasks_softmax = F.softmax(tasks_probs, dim=1)
-        logger.debug(f"Task probabilities (after softmax): {tasks_softmax}")
-
-        # Debug: 打印对应的任务名
-        for i, probs in enumerate(tasks_softmax):
-            task_scores = {tasks[j]['Name']: float(probs[j]) for j in range(len(tasks))}
-            logger.debug(f"Query {i} Task Probabilities: {task_scores}")
+        # Debug: 打印选择的任务类型
+        for i, idx in enumerate(tasks_idx):
+            logger.debug(f"Query {i} selected task: {tasks[idx]['Name']}")
         #到这里结束
 
         return final_result, costs, log_probs, tasks_probs

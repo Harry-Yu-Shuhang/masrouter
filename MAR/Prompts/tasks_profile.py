@@ -1,14 +1,28 @@
 tasks_profile = [
     {
         "Name": "EmotionalCare",
-        "Description": "Focus on **emotional support**: provide comfort, empathy, and calming responses during **emotional distress**, **anxiety**, or **anger**. Suitable for conversations involving apologies, reassurance, or emotional release."
+        "Description": (
+            "Provide **emotional support** when the user expresses **negative emotions** such as "
+            "'sad', 'depressed', 'anxious', 'angry', 'overwhelmed', or 'worried'. "
+            "Focus on **comforting**, **soothing**, and **reassuring** them during tough times.\n"
+            "Example queries: 'I'm feeling really sad and overwhelmed.', 'I feel anxious about my exam.', 'I'm stressed and need some support.'"
+        )
     },
     {
         "Name": "PlayfulChat",
-        "Description": "Engage in **lighthearted, cheerful interactions**: share jokes, **casual banter**, **flirtation**, and playful teasing. Best for **neutral or happy moods** without the need for deep advice or emotional soothing."
+        "Description": (
+            "Engage in **lighthearted, cheerful conversations** filled with 'jokes', 'flirtation', "
+            "'banter', or 'teasing'. The user may want to **laugh**, **have fun**, or **enjoy playful exchanges**.\n"
+            "Example queries: 'Tell me a funny joke.', 'Let's flirt a little.', 'Make me laugh.'"
+        )
     },
     {
         "Name": "ThoughtfulGuide",
-        "Description": "Deliver **logical reasoning** and **structured advice** on topics like **career decisions**, **problem-solving**, or **life planning**. Focus on providing **practical solutions** and **rational analysis**, not emotional comfort."
+        "Description": (
+            "Offer **structured advice** and **logical reasoning** to help the user **make decisions**, "
+            "**solve problems**, or **plan their life**. Topics include 'career choices', 'productivity', "
+            "'life planning', or **seeking guidance**.\n"
+            "Example queries: 'Can you help me decide between two job offers?', 'What's the best way to improve my productivity?', 'Give me advice on life planning.'"
+        )
     }
 ]

@@ -2,7 +2,7 @@
 
 #SBATCH --partition=3090                     # ✅ 使用 3090 分区
 #SBATCH --nodelist=aisurrey12                # ✅ 指定 3090 空闲节点
-#SBATCH --job-name=virtualgf_3090            # ✅ 任务名称
+#SBATCH --job-name=masrouter_3090            # ✅ 任务名称
 #SBATCH --nodes=1                            # ✅ 1 个节点
 #SBATCH --ntasks=1                           # ✅ 启动 1 个进程（和 GPU 对应）
 #SBATCH --gpus-per-node=1                    # ✅ 每节点 1 张 GPU

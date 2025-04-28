@@ -89,6 +89,20 @@ class MasRouter(torch.nn.Module):
                       decision_method = "FinalRefer", prompt_file = prompt_file, reasoning_name=reason["Name"], **kwargs)
             final_result.append(g.run(inputs={"query":query}, num_rounds=kwargs["num_rounds"])[0][0])
             costs.append(Cost.instance().value - previous_cost)
+        
+        #FIXME:Debug输出
+        # Debug: 打印 logits
+        logger.debug(f"Task logits (cosine similarities): {tasks_probs}")
+
+        # Debug: 打印 softmax 后的概率
+        tasks_softmax = F.softmax(tasks_probs, dim=1)
+        logger.debug(f"Task probabilities (after softmax): {tasks_softmax}")
+
+        # Debug: 打印对应的任务名
+        for i, probs in enumerate(tasks_softmax):
+            task_scores = {tasks[j]['Name']: float(probs[j]) for j in range(len(tasks))}
+            logger.debug(f"Query {i} Task Probabilities: {task_scores}")
+        #到这里结束
 
         return final_result, costs, log_probs, tasks_probs
     

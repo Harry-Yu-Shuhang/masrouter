@@ -1,37 +1,26 @@
 llm_profile = [
-                {'Name': 'gpt-4o-mini',
-                 'Description': 'GPT-4o Mini is a smaller version of the GPT-4o language model, designed for faster inference and reduced memory usage. It retains the same capabilities as the full-size model, but with fewer parameters.\n\
-                    The model costs $0.15 per million input tokens and $0.6 per million output tokens\n\
-                    In General Q&A Benchmark MMLU, GPT-4o-mini achieves an accuracy of 77.8.\n\
-                    In Reasoning Benchmark GPQA, GPT-4o-mini achieves an accuracy of 40.2.\n\
-                    In Coding Benchmark HumanEval, GPT-4o-mini achieves an accuracy of 85.7.\n\
-                    In Math Benchmark MATH, GPT-4o-mini achieves an accuracy of 66.09.'},
-                {'Name': 'claude-3-5-haiku-20241022',
-                 'Description': 'The new Claude 3.5 Haiku combines rapid response times with improved reasoning capabilities, making it ideal for tasks that require both speed and intelligence. Claude 3.5 Haiku improves on its predecessor and matches the performance of Claude 3 Opus.\n\
-                    The model costs $1.0 per million input tokens and $5.0 per million output tokens\n\
-                    In General Q&A Benchmark MMLU, claude-3-5-haiku achieves an accuracy of 67.9.\n\
-                    In Reasoning Benchmark GPQA, claude-3-5-haiku achieves an accuracy of 41.6.\n\
-                    In Coding Benchmark HumanEval, claude-3-5-haiku achieves an accuracy of 86.3.\n\
-                    In Math Benchmark MATH, claude-3-5-haiku achieves an accuracy of 65.9.'},
-                {'Name': 'gemini-1.5-flash-latest',
-                 'Description': 'Gemini 1.5 Flash was purpose-built as our fastest, most cost-efficient model yet for high volume tasks, at scale, to address developers feedback asking for lower latency and cost.\n\
-                    The model costs $0.2 per million input tokens and $0.8 per million output tokens\n\
-                    In General Q&A Benchmark MMLU, gemini-1.5-flash achieves an accuracy of 80.0.\n\
-                    In Reasoning Benchmark GPQA, gemini-1.5-flash achieves an accuracy of 39.5.\n\
-                    In Coding Benchmark HumanEval, gemini-1.5-flash achieves an accuracy of 82.6.\n\
-                    In Math Benchmark MATH, gemini-1.5-flash achieves an accuracy of 74.4.'},
-                {'Name': 'Meta-Llama-3.1-70B-Instruct',
-                 'Description': 'The Meta Llama 3.1 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out).\n\
-                    The model costs $0.2 per million input tokens and $0.2 per million output tokens\n\
-                    In General Q&A Benchmark MMLU, Llama 3.1 achieves an accuracy of 79.1.\n\
-                    In Reasoning Benchmark GPQA, Llama 3.1 achieves an accuracy of 46.7.\n\
-                    In Coding Benchmark HumanEval, Llama 3.1 achieves an accuracy of 80.7.\n\
-                    In Math Benchmark MATH, Llama 3.1 achieves an accuracy of 60.3.'},
-                {'Name': 'deepseek-chat',
-                 'Description': 'The deepseek multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out).\n\
-                    The model costs $0.1 per million input tokens and $0.4 per million output tokens\n\
-                    In General Q&A Benchmark MMLU, Llama 3.1 achieves an accuracy of 88.5.\n\
-                    In Reasoning Benchmark GPQA, Llama 3.1 achieves an accuracy of 59.1.\n\
-                    In Coding Benchmark HumanEval, Llama 3.1 achieves an accuracy of 88.4.\n\
-                    In Math Benchmark MATH, Llama 3.1 achieves an accuracy of 85.1'},
-                ]
+    {
+        "Name": "deepseek-ai/DeepSeek-V3",
+        "Description": "DeepSeek-V3 is an open-source large language model developed by DeepSeek. It offers strong capabilities in conversational tasks and general-purpose reasoning, while maintaining high cost-efficiency. \n\
+        The model costs $0.11 per million input tokens and $0.45 per million output tokens.\n\
+        In IFEval benchmark, DeepSeek-V3 achieves a score of 81.63.\n\
+        In MMLU benchmark, DeepSeek-V3 achieves a score of 66.80.\n\
+        In MATH benchmark, DeepSeek-V3 achieves a score of 40.63.\n\
+        Ideal for emotional care conversations due to its balanced reasoning and open-source foundation."
+    },
+    {
+        "Name": "gemini-2.5-flash-preview-04-17",
+        "Description": "Gemini 2.5 Flash Preview is a lightweight, low-latency LLM by Google, optimized for fast inference and high throughput. It supports rich interactions and handles informal chat with ease.\n\
+        The model costs $1.56 per million input tokens and $2.80 per million output tokens.\n\
+        In Arena leaderboard, it ranks among the top models with great conversational fluency.\n\
+        Best suited for playful and dynamic dialogue."
+    },
+    {
+        "Name": "Doubao-1.5-pro-32k",
+        "Description": "Doubao 1.5 Pro 32K is a cost-efficient large language model developed by Doubao, optimized for balanced performance across education, reasoning, and conversational tasks. It offers a generous 32K context window.\n\
+        The model costs $0.25 per million input tokens and $0.62 per million output tokens.\n\
+        In Medical Benchmark, Doubao-1.5-pro-32k achieves a score of 86.6.\n\
+        In Reasoning Benchmark, it scores 83.1.\n\
+        A perfect fit for thoughtful and practical guidance tasks where reasoning matters."
+    }
+]

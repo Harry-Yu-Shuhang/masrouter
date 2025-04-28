@@ -1,3 +1,4 @@
+# MAR/LLM/price.py
 from MAR.Utils.globals import Cost, PromptTokens, CompletionTokens
 import tiktoken
 # GPT-4:  https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
@@ -29,16 +30,56 @@ def cost_count(prompt, response, model_name):
     return price, prompt_len, completion_len
 
 MODEL_PRICE = {
-    "deepseek-ai/DeepSeek-R1":{
-        "input": 0.23,  
-        "output": 0.91   
+    "gpt-3.5-turbo-0125":{
+        "input": 0.5,
+        "output": 1.5
     },
-    "Doubao-1.5-pro-32k":{
-        "input": 0.25,  
-        "output": 0.62  
+    "gpt-3.5-turbo-1106":{
+        "input": 1.0,
+        "output": 2.0
     },
-    "Qwen/Qwen2.5-7B-Instruct":{
-        "input": 0.42, 
-        "output": 0.42   
+    "gpt-4-1106-preview":{
+        "input": 10.0,
+        "output": 30.0
+    },
+    "gpt-4o":{
+        "input": 2.5,
+        "output": 10.0
+    },
+    "gpt-4o-mini":{
+        "input": 0.15,
+        "output": 0.6
+    },
+    "claude-3-5-haiku-20241022":{
+        "input": 0.1,
+        "output": 0.5
+    },
+    "claude-3-5-sonnet-20241022":{
+        "input": 3.0,
+        "output": 15.0
+    },
+    "gemini-1.5-flash-latest":{
+        "input": 0.15,
+        "output": 0.60
+    },
+    "gemini-2.0-flash-thinking-exp":{
+        "input": 4.0,
+        "output": 16.0
+    },
+    "llama-3.3-70b-versatile":{
+        "input": 0.2,
+        "output": 0.2
+    },
+    "Meta-Llama-3.1-70B-Instruct":{
+        "input": 0.2,
+        "output": 0.2
+    },
+    'deepseek-chat':{
+        'input': 0.27,
+        'output': 1.1
+    },
+    'deepseek-ai/DeepSeek-V3':{
+        'input': 0.27,
+        'output': 1.1
     }
 }

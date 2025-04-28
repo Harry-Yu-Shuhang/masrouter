@@ -1,3 +1,14 @@
-tasks_profile = [{'Name': 'Math', 'Description': 'A mathematics problem often involves logical reasoning, calculations, and applying various mathematical concepts such as algebra, geometry, calculus, or statistics. The goal is to solve for unknowns, prove theorems, or model real-world phenomena using mathematical methods.'},
-                {'Name': 'Commonsense', 'Description': 'A commonsense question typically involves general knowledge, reasoning, or problem-solving skills. It may require understanding of everyday concepts, social norms, or human behavior to answer questions about common situations or scenarios.'},
-                {'Name': 'Code', 'Description': 'A code question typically involves writing, debugging, or understanding computer code. It may require knowledge of programming languages, algorithms, data structures, or software development practices to solve coding problems or implement software solutions.'},]
+tasks_profile = [
+    {
+        "Name": "EmotionalCare",
+        "Description": "Responsible for providing care, comfort, and empathy when users feel down, anxious, or angry. Helps users relieve emotional stress and regain inner peace."
+    },
+    {
+        "Name": "PlayfulChat",
+        "Description": "Engages users in lighthearted and enjoyable conversations, including daily small talk, humor, teasing, or flirting, creating a relaxed and pleasant atmosphere."
+    },
+    {
+        "Name": "ThoughtfulGuide",
+        "Description": "Offers rational analysis and practical advice when users seek suggestions, guidance, or life planning, helping them solve problems effectively."
+    }
+]

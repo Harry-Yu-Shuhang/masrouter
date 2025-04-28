@@ -95,10 +95,36 @@ def download_mmlu():
         save_jsonl(data, output_path)
         print(f"✅ Saved MMLU {subject}")
 
+def download_lccc(version="base"):
+    output_path = f"Datasets/lccc/lccc_{version}.jsonl"
+    if not should_download(output_path):
+        print(f"⏩ Skipping LCCC-{version}, already exists.")
+        return
+
+    print(f"📥 Downloading LCCC-{version}...")
+    os.makedirs("Datasets/lccc", exist_ok=True)
+    data = load_dataset("lccc", version)['train']
+    save_jsonl(data, output_path)
+    print(f"✅ Saved LCCC-{version}")
+
+def download_daily_dialogue():
+    output_path = "Datasets/daily_dialogue/daily_dialogue.jsonl"
+    if not should_download(output_path):
+        print("⏩ Skipping DailyDialog, already exists.")
+        return
+
+    print("📥 Downloading DailyDialog...")
+    os.makedirs("Datasets/daily_dialogue", exist_ok=True)
+    data = load_dataset("li2017dailydialog/daily_dialog", trust_remote_code=True)['train']
+    save_jsonl(data, output_path)
+    print("✅ Saved DailyDialog")
+
 if __name__ == "__main__":
-    download_gsm8k()
-    download_mbpp()
-    download_humaneval()
-    download_math()
-    download_mmlu()
+    # download_gsm8k()
+    # download_mbpp()
+    # download_humaneval()
+    # download_math()
+    # download_mmlu()
+    # download_lccc(version="base")
+    download_daily_dialogue()
     print("\n🎉 All datasets downloaded and saved in MasRouter format!")

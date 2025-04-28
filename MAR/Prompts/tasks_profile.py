@@ -1,14 +1,14 @@
 tasks_profile = [
     {
         "Name": "EmotionalCare",
-        "Description": "Engage in empathetic conversations to provide comfort, support mental well-being, and offer calming responses during emotional distress, anxiety, or anger situations."
+        "Description": "Focus on **emotional support**: provide comfort, empathy, and calming responses during **emotional distress**, **anxiety**, or **anger**. Suitable for conversations involving apologies, reassurance, or emotional release."
     },
     {
         "Name": "PlayfulChat",
-        "Description": "Facilitate lighthearted exchanges, including jokes, casual banter, playful teasing, and romantic flirtation, designed to uplift moods and create a fun atmosphere."
+        "Description": "Engage in **lighthearted, cheerful interactions**: share jokes, **casual banter**, **flirtation**, and playful teasing. Best for **neutral or happy moods** without the need for deep advice or emotional soothing."
     },
     {
         "Name": "ThoughtfulGuide",
-        "Description": "Provide structured, logical advice and life guidance on topics like career planning, decision-making, and personal development. Focus on offering practical, actionable recommendations."
+        "Description": "Deliver **logical reasoning** and **structured advice** on topics like **career decisions**, **problem-solving**, or **life planning**. Focus on providing **practical solutions** and **rational analysis**, not emotional comfort."
     }
 ]

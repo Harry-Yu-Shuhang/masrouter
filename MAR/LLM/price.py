@@ -40,5 +40,13 @@ MODEL_PRICE = {
     "Qwen/Qwen2.5-7B-Instruct":{
         "input": 0.42, 
         "output": 0.42   
-    }
+    },
+    "deepseek-ai/DeepSeek-V3":{
+        "input": 0.11, 
+        "output": 0.45   
+    },
+    "gemini-2.5-flash-preview-04-17":{
+        "input": 0.52, 
+        "output": 2.08
+    },
 }

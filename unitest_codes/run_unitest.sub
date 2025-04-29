@@ -48,6 +48,6 @@ uv sync >> output.log 2>>error.log || { echo "⚠️ uv sync 失败" >> output.l
 
 # ✅ 运行训练脚本
 echo "🚀 开始单元测试." >> output.log
-uv run unitest/unitest.py >> output.log 2>>error.log || { echo "❌ 训练失败" >> output.log; exit 1; }
+uv run unites_codes/unitest.py >> output.log 2>>error.log || { echo "❌ 训练失败" >> output.log; exit 1; }
 
 echo "✅ 任务完成" >> output.log

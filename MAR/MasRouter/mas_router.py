@@ -89,12 +89,6 @@ class MasRouter(torch.nn.Module):
                       decision_method = "FinalRefer", prompt_file = prompt_file, reasoning_name=reason["Name"], **kwargs)
             final_result.append(g.run(inputs={"query":query}, num_rounds=kwargs["num_rounds"])[0][0])
             costs.append(Cost.instance().value - previous_cost)
-        
-        #FIXME:Debug输出
-        # Debug: 打印选择的任务类型
-        for i, idx in enumerate(tasks_idx):
-            logger.debug(f"Query {i} selected task: {tasks[idx]['Name']}")
-        #到这里结束
 
         return final_result, costs, log_probs, tasks_probs
     

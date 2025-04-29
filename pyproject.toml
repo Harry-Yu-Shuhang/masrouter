@@ -31,4 +31,5 @@ dependencies = [
     "python-pptx",
     "pyarrow",
     "datasets",
+    "llm2vec",
 ]
